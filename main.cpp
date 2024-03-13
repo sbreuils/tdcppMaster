@@ -165,6 +165,40 @@ int main(){
 
 
 
+    std::list<std::string> philo = {"Platon","Aristote","Descartes","Kant"};
+    std::list<std::string> math = { "Gauss", "Laplace", "Poincare","Descartes"};
+
+
+    philo.sort();
+    math.sort();
+
+    std::list<std::string> listeFusionee;
+    std::merge(philo.begin(),philo.end(),math.begin(),math.end(),std::back_inserter(listeFusionee));
+
+    listeFusionee.unique();
+
+    listeFusionee.reverse();
+
+    std::list<std::string>::iterator itListe = philo.begin();
+    for( ;itListe != philo.end();itListe++ ){
+        std::cout << *itListe << " ";
+    }
+    std::cout << "\n";
+
+
+    for( std::string mot : math   ){
+        std::cout << mot << " ";
+    }
+    std::cout << "\n";
+
+
+    for( std::string mot : listeFusionee   ){
+        std::cout << mot << " ";
+    }
+    std::cout << "\n";
+
+
+
     // TD5 exo1 
     // std::vector<int> vec(100000000,1);
     // TD_M1::Chrono timer;
