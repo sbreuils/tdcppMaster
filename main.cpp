@@ -13,16 +13,7 @@
 #include "chrono.hpp"
 
 
-int miniRecursive(std::vector<int> vecteur, int* minimum, unsigned int indice=0)
-{
-    if(indice==vecteur.size()){
-        return *minimum;
-    }
-    if(vecteur[indice] < *minimum){
-        *minimum = vecteur[indice];
-    }
-    return miniRecursive(vecteur,minimum,indice+1);
-}
+const int maConstante = 3;
 
 int donnerNombreOccurrences(std::vector<int> vecteur, int x, unsigned int indice=0){
     if(indice>=vecteur.size()){
