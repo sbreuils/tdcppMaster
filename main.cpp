@@ -130,6 +130,15 @@ void afficheVector(const std::vector<int> &vec){
     std::cout << "\n";
 }
 
+void afficheVectorCompacte(const std::vector<int> &vec){
+    for(const int& val : vec){
+        std::cout << val << " ";
+    }
+    std::cout << "\n";
+}
+
+
+
 int main(){
     // TD5 exo2
     unsigned int N = 10;
@@ -152,6 +161,7 @@ int main(){
     //     std::cout << *it << std::endl;
     // }
     afficheVector(vec);
+    afficheVectorCompacte(vec);
 
 
 
