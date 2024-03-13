@@ -10,7 +10,6 @@
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
-#include "chrono.hpp"
 
 
 int miniRecursive(std::vector<int> vecteur, int* minimum, unsigned int indice=0)
@@ -153,6 +152,13 @@ int main(){
     // vec.shrink_to_fit();
     // std::cout << "capacity = "<<vec.capacity() << std::endl;
     // std::cout << "size = "<<vec.size() << std::endl;
+
+
+    std::vector<int>::iterator it = vec.begin();
+    for( ; it!=vec.end() ; ++it ){
+        std::cout << *it << std::endl;
+    }
+
 
 
     // TD5 exo1 
