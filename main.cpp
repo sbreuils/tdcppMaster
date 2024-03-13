@@ -23,6 +23,7 @@ int miniRecursive(std::vector<int> vecteur, int* minimum, unsigned int indice=0)
     }
     return miniRecursive(vecteur,minimum,indice+1) + 3;
 }
+const int maConstante = 3;
 
 int donnerNombreOccurrences(std::vector<int> vecteur, int x, unsigned int indice=0){
     if(indice>=vecteur.size()){
