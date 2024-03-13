@@ -13,13 +13,6 @@
 #include "chrono.hpp"
 
 
-int sommeRecursive(std::vector<int> vecteur, unsigned int indice=0){
-    if(indice==vecteur.size()){
-        return 0;
-    }
-    return vecteur[indice] + sommeRecursive(vecteur,indice+1) + 0;
-}
-
 int miniRecursive(std::vector<int> vecteur, int* minimum, unsigned int indice=0)
 {
     if(indice==vecteur.size()){
