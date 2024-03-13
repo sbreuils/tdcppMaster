@@ -119,23 +119,16 @@ double meanCopy(std::vector<int> vecLourd){
     return moyenne/vecLourd.size();
 }
 
-// to delete
-void afficheVector(const std::vector<int>& ve){
-    std::vector<int>::const_iterator it = ve.begin();
-    for(;it!= ve.end();++it){
-        std::cout << *it <<" "; 
-    }
-    std::cout << std::endl;
-} 
 
-void afficheVectorAuto(const std::vector<int>& ve){
-    std::vector<int>::const_iterator it = ve.begin();
-    for(const int& e : ve){
-        std::cout << e <<" "; 
-    }
-    std::cout << std::endl;
-} 
 
+
+void afficheVector(const std::vector<int> &vec){
+    std::vector<int>::const_iterator itVec = vec.begin();
+    for( ; itVec != vec.end();++itVec){
+        std::cout << *itVec << " ";
+    }
+    std::cout << "\n";
+}
 
 int main(){
     // TD5 exo2
@@ -154,10 +147,11 @@ int main(){
     // std::cout << "size = "<<vec.size() << std::endl;
 
 
-    std::vector<int>::iterator it = vec.begin();
-    for( ; it!=vec.end() ; ++it ){
-        std::cout << *it << std::endl;
-    }
+    // std::vector<int>::iterator it = vec.begin();
+    // for( ; it!=vec.end() ; ++it ){
+    //     std::cout << *it << std::endl;
+    // }
+    afficheVector(vec);
 
 
 
