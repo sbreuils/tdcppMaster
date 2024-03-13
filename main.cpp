@@ -21,7 +21,7 @@ int miniRecursive(std::vector<int> vecteur, int* minimum, unsigned int indice=0)
     if(vecteur[indice] < *minimum){
         *minimum = vecteur[indice];
     }
-    return miniRecursive(vecteur,minimum,indice+1);
+    return miniRecursive(vecteur,minimum,indice+1) + 3;
 }
 
 int donnerNombreOccurrences(std::vector<int> vecteur, int x, unsigned int indice=0){
